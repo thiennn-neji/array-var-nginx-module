@@ -2,14 +2,14 @@ if test -n "$ngx_module_link"; then
     if test -n "$NDK_SRCS"; then
         echo "found ngx_devel_kit for ngx_array_var; looks good."
     else
-        echo "error: ngx_devel_kit is required to build ngx_array_var; please put it before ngx_array_var." 1>&2
+        echo "error: ngx_devel_kit is required to build ngx_array_var; please put it before ngx_array_var. (dynamic)" 1>&2
         exit 1
     fi
 else
     if echo $HTTP_MODULES | grep " ndk_http_module" > /dev/null; then
         echo "found ngx_devel_kit for ngx_array_var; looks good."
     else
-        echo "error: ngx_devel_kit is required to build ngx_array_var; please put it before ngx_array_var." 1>&2
+        echo "error: ngx_devel_kit is required to build ngx_array_var; please put it before ngx_array_var. (static)" 1>&2
         exit 1
     fi
 fi
